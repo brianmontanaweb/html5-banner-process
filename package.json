@@ -1,0 +1,41 @@
+{
+  "name": "hp-banners",
+  "version": "1.0.0",
+  "description": "Banners and webpack build process",
+  "main": "app.js",
+  "config": {
+    "directory": "banner-name-300x250"
+  },
+  "scripts": {
+    "sass": "node-sass --output-style compressed %npm_package_config_directory%/src/style.scss %npm_package_config_directory%/dist/style.css",
+    "uglifyjs": "uglifyjs %npm_package_config_directory%/src/app.js -c -m  -o %npm_package_config_directory%/dist/app.min.js",
+    "html": "html-minifier %npm_package_config_directory%/src/index.html --collapse-boolean-attributes --collapse-whitespace --decode-entities --html --minify-css --minify-js --process-conditional-comments --remove-comments --remove-empty-attributes --use-short-doctype -o %npm_package_config_directory%/dist/index.html",
+    "imagemin": "imagemin %npm_package_config_directory%/src/images/* -o %npm_package_config_directory%/dist/",
+    "clean": "rimraf %npm_package_config_directory%/dist",
+    "zip": "bestzip %npm_package_config_directory%/dist/%npm_package_config_directory%.zip %npm_package_config_directory%/dist",
+    "build": "npm run clean && npm run sass && npm run html && npm run uglifyjs && npm run imagemin && npm run zip"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@bitbucket-ssh.uhub.biz:7999/~brian.montana_blastradius.com/hp-banners.git"
+  },
+  "keywords": [
+    "webpack",
+    "banners",
+    "html5",
+    "animation",
+    "marketing"
+  ],
+  "author": "Brian Montana",
+  "license": "MIT",
+  "devDependencies": {
+    "bestzip": "^1.1.4",
+    "html-minifier": "^3.5.7",
+    "imagemin-cli": "^3.0.0",
+    "node-sass": "^4.7.2",
+    "node-sass-cli": "0.0.4",
+    "rimraf": "^2.6.2",
+    "uglify-js": "^3.2.2"
+  },
+  "dependencies": {}
+}
