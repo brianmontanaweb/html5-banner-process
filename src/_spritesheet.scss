@@ -8,26 +8,36 @@ SCSS variables are information about icon's compiled state, stored under its ori
 The large array-like variables contain all information about a single icon
 $icon-home: x y offset_x offset_y width height total_width total_height image_path;
 */
+$chicago-x: 0px;
+$chicago-y: 0px;
+$chicago-offset-x: 0px;
+$chicago-offset-y: 0px;
+$chicago-width: 500px;
+$chicago-height: 196px;
+$chicago-total-width: 500px;
+$chicago-total-height: 336px;
+$chicago-image: 'spritesheet.png';
+$chicago: 0px 0px 0px 0px 500px 196px 500px 336px 'spritesheet.png';
 $moon-x: 0px;
-$moon-y: 0px;
+$moon-y: 198px;
 $moon-offset-x: 0px;
-$moon-offset-y: 0px;
+$moon-offset-y: -198px;
 $moon-width: 48px;
 $moon-height: 48px;
-$moon-total-width: 88px;
-$moon-total-height: 138px;
+$moon-total-width: 500px;
+$moon-total-height: 336px;
 $moon-image: 'spritesheet.png';
-$moon: 0px 0px 0px 0px 48px 48px 88px 138px 'spritesheet.png';
+$moon: 0px 198px 0px -198px 48px 48px 500px 336px 'spritesheet.png';
 $sun-x: 0px;
-$sun-y: 50px;
+$sun-y: 248px;
 $sun-offset-x: 0px;
-$sun-offset-y: -50px;
+$sun-offset-y: -248px;
 $sun-width: 88px;
 $sun-height: 88px;
-$sun-total-width: 88px;
-$sun-total-height: 138px;
+$sun-total-width: 500px;
+$sun-total-height: 336px;
 $sun-image: 'spritesheet.png';
-$sun: 0px 50px 0px -50px 88px 88px 88px 138px 'spritesheet.png';
+$sun: 0px 248px 0px -248px 88px 88px 500px 336px 'spritesheet.png';
 
 /*
 The provided mixins are intended to be used with the array-like variables

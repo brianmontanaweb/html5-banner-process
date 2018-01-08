@@ -1,0 +1,74 @@
+@import 'spritesheet';
+
+html, body {
+  width: 100%;
+  height: 100%;
+  vertical-align: baseline;
+  border: 0 none;
+  outline: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.bn-container {
+  position: relative;
+  width: 300px;
+  height: 250px;
+  display: block;
+  margin: auto;
+  overflow: hidden;
+}
+
+.bn-content {
+  background-color: black;
+}
+
+.bn-sky {
+  background-image: url('sky.jpg');
+  background-size: cover;
+  width: 300px;
+  height: 250px;
+}
+
+.bn-ball {
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  top: calc(50% - 1rem);
+  left: calc(50% - 1rem);
+  background-color: red;
+  border-radius: 50%;
+  overflow: hidden;
+}
+//backgroundPositionX is for 'top-down' sprite layout
+.bn-spritesheet {
+  position: absolute;
+  background-image: url($moon-image);
+  background-position-x: $moon-offset-x;
+}
+
+.bn-sun {
+  z-index: 1;
+  background-position-y: $sun-offset-y;
+  width: $sun-width;
+  height: $sun-height;
+  top: 2rem;
+  right: calc(50% - #{$sun-width} / 2);
+}
+
+.bn-moon {
+  z-index: 2;
+  background-position-y: $moon-offset-y;
+  width: $moon-width;
+  height: $moon-height;
+  top: 3rem;
+  right: calc(50% - (#{$moon-width} / 2));
+}
+
+.bn-chicago {
+  background-position-y: $chicago-offset-y;
+  width: $chicago-width;
+  height: $chicago-height;
+  bottom: 0;
+  left: 0;
+}
